@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>📅 رزرو آنلاین</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="main-page">
+  <div id="header">
+    <h2>📅 انتخاب روز و ساعت برای خدمت: <span id="serviceName">...</span></h2>
+    <a href="main.html" style="color: #f5e6c8; text-decoration: underline; display: inline-block; margin-top: 1rem;">← تغییر خدمت</a>
+  </div>
+
+  <div class="reservation-grid" id="reservationGrid"></div>
+
+  <div id="bookingFormContainer" style="display: none; margin-top: 2rem; max-width: 500px;">
+    <div class="modal-content">
+      <h3>📝 ثبت رزرو برای <span id="selectedSlot">-</span></h3>
+      <p>لطفاً مبلغ 150,000 تومان را به شماره کارت زیر واریز کنید:</p>
+      <p><strong>6037-9911-1234-5678</strong> (بانک ملی)</p>
+      <form id="reserveForm">
+        <input type="hidden" name="service" id="selectedService">
+        <input type="hidden" name="day" id="selectedDay">
+        <input type="hidden" name="hour" id="selectedHour">
+        <label>نام:</label>
+        <input type="text" name="name" required>
+        <label>شماره تماس:</label>
+        <input type="tel" name="phone" required>
+        <button type="submit">✅ ثبت درخواست رزرو</button>
+        <button type="button" onclick="cancelSelection()" style="background: #dc3545; margin-right: 0.5rem;">لغو انتخاب</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="reservation.js"></script>
+</body>
+</html>
+``

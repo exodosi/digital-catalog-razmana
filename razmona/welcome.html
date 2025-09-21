@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>خوش آمدید</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="welcome-page">
+  <div id="welcome-message">به رازمنا خوش آمدید، اینجا زیبایی شما نمایان می‌شود</div>
+  <script>
+    const msg = document.getElementById("welcome-message");
+    setTimeout(() => { msg.style.opacity = 1 }, 500);
+    setTimeout(() => { msg.style.opacity = 0 }, 6000);
+    setTimeout(() => { window.location.href = "main.html" }, 7000);
+  </script>
+</body>
+</html>
